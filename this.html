@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>This is about javascript "This". </h2>
+
+    <p onclick="this.innerText = 'you clicked'"> This is a paragraph</p>
+
+    <script>
+        const myObj = {
+            name: "Rubel",
+            getFullName: function(){
+                console.log(this);
+                return 'M. ' + this.name;
+            }
+        }
+        // myObj.getFullName();
+        const anotherObj = {
+            name: "Rahul"
+        }
+
+        setTimeout(function(){
+            console.log(this);
+        },1000);
+        // anotherObj.getFullName = myObj.getFullName;
+        // console.log(anotherObj.getFullName);
+        
+        // myObj.getFullName();
+        // anotherObj.getFullName();
+
+        function add( a, b){
+            console.log(this);
+            return a + b;
+        }
+        add(12, 13);
+
+        anotherObj.sum = add;
+        anotherObj.sum();
+    </script>
+</body>
+</html>
