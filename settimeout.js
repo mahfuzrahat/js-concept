@@ -6,9 +6,9 @@ setTimeout(function (){
     console.log("I am waiting");    
 },5000);
 
-setInterval(function(){
-    console.log("do again and again")
-}, 2000);
+// setInterval(function(){
+//     console.log("do again and again")
+// }, 2000);
 
 console.log(4444);
 console.log(4444);
